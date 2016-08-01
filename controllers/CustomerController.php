@@ -63,6 +63,8 @@ class CustomerController extends Controller
      */
     public function actionCreate()
     {
+        return $this->redirect(['index']);
+        
         $model = new Customer();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -82,7 +84,10 @@ class CustomerController extends Controller
      */
     public function actionUpdate($id)
     {
+
         $model = $this->findModel($id);
+
+        return $this->redirect(['view', 'id' => $model->ID]);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->ID]);
@@ -101,6 +106,7 @@ class CustomerController extends Controller
      */
     public function actionDelete($id)
     {
+        return $this->redirect(['index']);
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

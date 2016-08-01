@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'TMBQPER_SEGMENTS',
             'COUNTRY',
             'NATIONALITY_CODE',
-            'PASSWORD',
+            //'PASSWORD',
             'EMAIL_ADDRESS:email',
             'ID',
         ],

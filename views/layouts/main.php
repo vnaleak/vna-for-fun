@@ -28,7 +28,7 @@ AppAsset::register($this);
     <?php
     NavBar::begin([
         'brandLabel' => 'VIETNAM AIRLINE LEAKAGES',
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandUrl' => 'http://projectkit.net',
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
@@ -59,6 +59,7 @@ AppAsset::register($this);
 
     <div class="container">
         <?= Breadcrumbs::widget([
+            'homeLink'=>['label' => 'Home', 'url' => 'http://projectkit.net',],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= $content ?>
@@ -67,7 +68,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; <a href="http://projectkit.net">ProjectKit</a> <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
